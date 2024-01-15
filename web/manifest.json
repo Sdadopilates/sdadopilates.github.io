@@ -1,11 +1,11 @@
 {
-    "name": "suesite",
-    "short_name": "suesite",
+    "name": "SDPilaties",
+    "short_name": "SDPilaties",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Site for Sue",
+    "description": "Sue Dado Pilaties",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
