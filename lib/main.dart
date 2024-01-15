@@ -165,10 +165,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void _launchMailClient() async {
     const mailUrl = 'mailto:${Strings.email}';
     try {
-      await launchUrl(Uri.parse(mailUrl));
-    } catch (e) {
       await Clipboard.setData(const ClipboardData(text: Strings.email));
       showSnackbar(context, "Email address copied to clipboard");
+      await launchUrl(Uri.parse(mailUrl));
+    } catch (e) {
+      print(e);
     }
   }
 
