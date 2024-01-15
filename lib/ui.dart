@@ -6,6 +6,12 @@ Widget verticalSeparator() {
   );
 }
 
+Widget horizontalSeparator() {
+  return const SizedBox(
+    width: 20.0,
+  );
+}
+
 double deviceHeight(BuildContext context) => MediaQuery.of(context).size.height;
 
 double deviceWidth(BuildContext context) => MediaQuery.of(context).size.width;

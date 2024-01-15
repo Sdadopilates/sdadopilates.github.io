@@ -1,4 +1,6 @@
 class Strings {
+  //TODO CHANGE THIS CHANGE THIS CHANGE THIS CHANGE THIS
+  static const String email = "CHANGETHIS@aol.com";
   static const String headerTitle = "SDPilates";
   static const String headerSubtitle = "Pilates! Pilates! Lets do pilates!";
   static const String bookButton = "Book now via Email";
@@ -25,4 +27,25 @@ class Strings {
     "Flow means you strive to move from one movement to the next as seamlessly as possible.",
     "Precision means you perform every movement and breathe with intention.",
   ];
+
+  static const String titleCost = "Cost:";
+  static const List<String> bodyCost = [
+    "Privates - \$80",
+    "Duet - \$50 per person",
+    "Trio - \$40 per person",
+  ];
+
+  static const String titlePackages = "Packages:";
+  static const List<String> bodyPackages = [
+    "5 Privates - \$350",
+    "10 Privates - \$700",
+    "Class of 3 People for Tower/Mat Class:\n4 Groups sessions - \$120",
+    "The Tower is a great piece of Pilates equipment that is capable of challenging the body in a new and different way than the reformer. In the Tower/Mat class, clients will get a great mix of both Tower equipment as well as mat exercises to get them strong and flexible in all the right spots."
+  ];
+
+  static const String titleAbout = "About Me";
+  static const String bodyAboutAccolades =
+      "Power Pilates 600 hour • Yoga RYT 200 • Prenatal and Postpartum Corrective Exercise Specialist";
+  static const String bodyAbout =
+      "Sue Dado holds a B.A. in Dance Teaching and Choreography from Columbia College Chicago. Sue has been practicing Pilates since 1996, became Power Pilates Mat certified in 2002, and completed the comprehensive 600 hour certification program in 2003. She received her 200 hour yoga certification from North Texas Yoga in 2017 and completed the Prenatal and Postpartum Corrective Exercise Specialist training in September of 2022.\n\nSue enjoys teaching people how to take care of and maintain their bodies using many different forms of movement. She has a great amount of exposure to Bartenieff Fundamentals (an extension of Laban Movement Analysis) from her dance career that she incorporates into her work and uses yoga breathing techniques to help clients overcome stress.\n\nIn 2010, Sue was diagnosed with Adrenal Fatigue and has slowly healed using Pilates, nutrition, and rest. Throughout her career, Sue has worked with people struggling with stressed induced hormonal imbalances, Fibromyalgia, Rheumatoid Arthritis, carpal tunnel, tennis elbow, chronic pain, pre and post surgery, post injury, prenatal and postnatal, and post cancer treatment.\n\nStudying and teaching Pilates has made her a stronger dancer and all-around mover. She enjoys teaching these beneficial exercises to everyone. Sue believes Pilates can improve everything you do from how you do your daily work to any sport you practice.";
 }

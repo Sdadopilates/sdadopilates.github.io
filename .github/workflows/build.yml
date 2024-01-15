@@ -16,7 +16,7 @@ jobs:
           flutter-version: '3.16.7'
       - run: flutter pub get
       - run: flutter build web --base-href "/sdpilaties/"
-      - uses: JamesIves/github-pages-deploy-action@v4.3.3
+      - uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           branch: gh-pages
           folder: build/web
