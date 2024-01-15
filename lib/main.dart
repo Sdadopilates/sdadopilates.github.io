@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:suesite/strings.dart';
-import 'package:suesite/styles.dart';
-import 'package:suesite/ui.dart';
+import 'package:sdpilates/strings.dart';
+import 'package:sdpilates/styles.dart';
+import 'package:sdpilates/ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,8 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             header(),
             verticalSeparator(),
-            verticalSeparator(),
-            titleAndBody(Strings.titlePrivate, Strings.bodyPrivate)
+            titleAndBody(Strings.titlePrivate, Strings.bodyPrivate),
+            titleAndBody(Strings.titleWhyPrivate, Strings.bodyWhyPrivate),
+            titleAndBody(Strings.titleAttention, Strings.bodyAttention),
+            numberedList(Strings.titleSixPrinciples, Strings.bodySixPrinciples),
           ],
         ),
       ),
@@ -84,6 +86,28 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Column(children: [
         Text(title, style: Styles.title),
         Text(body, style: Styles.body),
+      ]),
+    );
+  }
+
+  Widget numberedList(String title, List<String> list) {
+    return Padding(
+      padding: const EdgeInsets.all(32.0),
+      child: Column(children: [
+        Text(title, style: Styles.title),
+        ListView.builder(
+          shrinkWrap: true,
+          itemCount: list.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Text(
+                '${index + 1}. ${list[index]}',
+                style: Styles.body,
+              ),
+            );
+          },
+        )
       ]),
     );
   }

@@ -12,11 +12,12 @@ class Styles {
   );
 
   static const title = TextStyle(
-    fontSize: 30.0,
+    fontWeight: FontWeight.bold,
+    fontSize: 20.0,
   );
 
   static const body = TextStyle(
-    fontSize: 20.0,
+    fontSize: 16.0,
   );
 
   static const buttonStyle = TextStyle(
