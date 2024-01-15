@@ -29,3 +29,10 @@ flutter:
 
   assets:
     - assets/images/
+
+  fonts:
+    - family: PTSerif
+      fonts:
+        - asset: assets/fonts/ptserif_regular.ttf
+        - asset: assets/fonts/ptserif_bold.ttf
+          weight: 700
