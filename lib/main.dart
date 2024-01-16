@@ -124,23 +124,23 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget buildList(List<String> list, ListType type) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: list.length,
-      itemBuilder: (context, index) {
-        return Padding(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: List.generate(
+        list.length,
+            (index) => Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: type == ListType.numbered
               ? Text(
-                  '${index + 1}. ${list[index]}',
-                  style: Styles.body,
-                )
+            '${index + 1}. ${list[index]}',
+            style: Styles.body,
+          )
               : Text(
-                  '• ${list[index]}',
-                  style: Styles.body,
-                ),
-        );
-      },
+            '• ${list[index]}',
+            style: Styles.body,
+          ),
+        ),
+      ),
     );
   }
 

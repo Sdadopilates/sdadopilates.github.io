@@ -9,7 +9,7 @@ class Strings {
   static const String bodyPrivate =
       "Everyone can benefit from the undivided attention private training provides. I will listen to your specific concerns, physically assess where you are, and then create a plan to help you reach your goals. With the one-on-one attention you’ll receive, you will soon feel and move better in most areas of your life.";
 
-  static const String titleWhyPrivate = "Why Do I Need Private Training?";
+  static const String titleWhyPrivate = "Who Needs Private Training:";
   static const String bodyWhyPrivate =
       "A private equipment session can help relieve anxieties, familiarize yourself with it, and build confidence all in the privacy of a home studio. This will empower you to continue with private sessions, move on to a small group, or try a studio class.\n\nPrivate training is often for those trying to achieve certain athletic goals, but is also recommended for those recovering from injuries, surgeries, illness, and other conditions that require specific attention. Sometimes private training is useful for a brief time, but may be lifelong for others. I am here to provide you with safe and effective training to maintain health and wellness in your everyday activities and lives.";
 
