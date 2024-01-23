@@ -1,8 +1,8 @@
 class Strings {
-  //TODO CHANGE THIS CHANGE THIS CHANGE THIS CHANGE THIS
-  static const String email = "CHANGETHIS@aol.com";
+  static const String email = "sdadopilates@gmail.com";
   static const String headerTitle = "SDPilates";
-  static const String headerSubtitle = "Pilates! Pilates! Lets do pilates!";
+  static const String headerSubtitle =
+      "Fun classes to strengthen and condition your whole body!";
   static const String bookButton = "Book now via Email";
 
   static const String titlePrivate = "Private Training Benefits:";

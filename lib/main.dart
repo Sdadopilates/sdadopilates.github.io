@@ -110,36 +110,30 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget customList(String title, List<String> list, ListType type) {
+    List<Widget> generatedList = List.generate(
+      list.length,
+      (index) => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: type == ListType.numbered
+            ? Text(
+                '${index + 1}. ${list[index]}',
+                style: Styles.body,
+              )
+            : Text(
+                '• ${list[index]}',
+                style: Styles.body,
+              ),
+      ),
+    );
+    List<Widget> preList = [
+      Text(title, style: Styles.title),
+      const SizedBox(height: 10),
+    ];
     return Padding(
       padding: const EdgeInsets.all(32.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(title, style: Styles.title),
-          const SizedBox(height: 10),
-          buildList(list, type),
-        ],
-      ),
-    );
-  }
-
-  Widget buildList(List<String> list, ListType type) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: List.generate(
-        list.length,
-            (index) => Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: type == ListType.numbered
-              ? Text(
-            '${index + 1}. ${list[index]}',
-            style: Styles.body,
-          )
-              : Text(
-            '• ${list[index]}',
-            style: Styles.body,
-          ),
-        ),
+        children: preList + generatedList,
       ),
     );
   }
