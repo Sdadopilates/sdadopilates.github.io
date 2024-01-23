@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             header(),
             verticalSeparator(),
@@ -90,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget aboutSection() {
     return Padding(
       padding: const EdgeInsets.all(32.0),
-      child: Column(children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         const Text(Strings.titleAbout, style: Styles.titleAbout),
         const Text(Strings.bodyAboutAccolades, style: Styles.bodyBulleted),
         verticalSeparator(),
@@ -102,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget titleAndBody(String title, String body) {
     return Padding(
       padding: const EdgeInsets.all(32.0),
-      child: Column(children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(title, style: Styles.title),
         Text(body, style: Styles.body),
       ]),
