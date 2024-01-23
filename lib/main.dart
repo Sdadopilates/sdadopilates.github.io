@@ -47,7 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
             header(),
             verticalSeparator(),
             titleAndBody(Strings.titlePrivate, Strings.bodyPrivate),
+            image("gym_1.jpg"),
             titleAndBody(Strings.titleWhyPrivate, Strings.bodyWhyPrivate),
+            image("gym_2.jpg"),
             titleAndBody(Strings.titleAttention, Strings.bodyAttention),
             customList(Strings.titleSixPrinciples, Strings.bodySixPrinciples,
                 ListType.numbered),
@@ -62,6 +64,17 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  Widget image(String name) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    double aspectRatio = 4 / 3;
+
+    double imageWidth = screenWidth;
+    double imageHeight = screenWidth / aspectRatio;
+    return Image.asset("assets/images/$name",
+        width: imageWidth, height: imageHeight, fit: BoxFit.cover);
+  }
+
   Widget header() {
     return Container(
         width: double.infinity,
@@ -71,21 +84,24 @@ class _MyHomePageState extends State<MyHomePage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(children: [
-          SizedBox(
-            height: deviceHeight(context) * 0.6,
-          ),
-          const Text(Strings.headerTitle, style: Styles.headerTitle),
-          const Text(Strings.headerSubtitle, style: Styles.headerSubtitle),
-          verticalSeparator(),
-          ElevatedButton(
-            onPressed: () {
-              _launchMailClient();
-            },
-            child: const Text(Strings.bookButton, style: Styles.buttonStyle),
-          ),
-          verticalSeparator(),
-        ]));
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Column(children: [
+            SizedBox(
+              height: deviceHeight(context) * 0.6,
+            ),
+            const Text(Strings.headerTitle, style: Styles.headerTitle),
+            const Text(Strings.headerSubtitle, style: Styles.headerSubtitle),
+            verticalSeparator(),
+            ElevatedButton(
+              onPressed: () {
+                _launchMailClient();
+              },
+              child: const Text(Strings.bookButton, style: Styles.buttonStyle),
+            ),
+            verticalSeparator(),
+          ]),
+        ));
   }
 
   Widget aboutSection() {
