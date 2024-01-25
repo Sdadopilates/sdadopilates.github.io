@@ -90,14 +90,14 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: deviceHeight(context) * 0.6,
             ),
-            const Text(Strings.headerTitle, style: Styles.headerTitle),
-            const Text(Strings.headerSubtitle, style: Styles.headerSubtitle),
+            const SelectableText(Strings.headerTitle, style: Styles.headerTitle),
+            const SelectableText(Strings.headerSubtitle, style: Styles.headerSubtitle),
             verticalSeparator(),
             ElevatedButton(
               onPressed: () {
                 _launchMailClient();
               },
-              child: const Text(Strings.bookButton, style: Styles.buttonStyle),
+              child: const SelectableText(Strings.bookButton, style: Styles.buttonStyle),
             ),
             verticalSeparator(),
           ]),
@@ -108,10 +108,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Padding(
       padding: const EdgeInsets.all(32.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text(Strings.titleAbout, style: Styles.titleAbout),
-        const Text(Strings.bodyAboutAccolades, style: Styles.bodyBulleted),
+        const SelectableText(Strings.titleAbout, style: Styles.titleAbout),
+        const SelectableText(Strings.bodyAboutAccolades, style: Styles.bodyBulleted),
         verticalSeparator(),
-        const Text(Strings.bodyAbout, style: Styles.body),
+        const SelectableText(Strings.bodyAbout, style: Styles.body),
       ]),
     );
   }
@@ -120,8 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Padding(
       padding: const EdgeInsets.all(32.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(title, style: Styles.title),
-        Text(body, style: Styles.body),
+        SelectableText(title, style: Styles.title),
+        SelectableText(body, style: Styles.body),
       ]),
     );
   }
@@ -132,18 +132,18 @@ class _MyHomePageState extends State<MyHomePage> {
       (index) => Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: type == ListType.numbered
-            ? Text(
+            ? SelectableText(
                 '${index + 1}. ${list[index]}',
                 style: Styles.body,
               )
-            : Text(
+            : SelectableText(
                 '• ${list[index]}',
                 style: Styles.body,
               ),
       ),
     );
     List<Widget> preList = [
-      Text(title, style: Styles.title),
+      SelectableText(title, style: Styles.title),
       const SizedBox(height: 10),
     ];
     return Padding(
